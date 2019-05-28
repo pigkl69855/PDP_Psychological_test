@@ -92,18 +92,23 @@ int main() {
 	cout << "如果是差不多，記錄3分；" << endl;
 	cout << "如果只是有一點同意，請記錄2分；" << endl;
 	cout << "如果答案是不同意，就記錄1分。" << endl;
-	cout << "＊提醒你注意一點——回答問題時不是依據別人眼中的你來判斷，而是你認為你本質上是不是這樣的！" << endl << endl;
+	cout << "＊提醒你注意一點——回答問題時不是依據別人眼中的你來判斷，而是你認為你本質上是不是這樣的！" << endl;
+	cout << "如果你上一題不小心打錯可以輸入'99'，來回到上一題進行作答" << endl << endl;
 	
 	for (int i = 1;i<=30; i++) {
 		cout << question[i]<<endl;
 		cout << question[0] << endl;
 		cin >> answer[i];
+		
 		while (answer[i] > 5 or answer[i] < 1) {
+			if (answer[i] == 99) {
+				i -= 2;
+				break;
+			}
 			cout << "輸入不符合規範，請再輸入一次" << endl << endl;
 			cout << question[i] << endl;
 			cin >> answer[i];
 		}
-			
 		cout << endl ;
 	}
 
