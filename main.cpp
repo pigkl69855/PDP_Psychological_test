@@ -98,7 +98,7 @@ int main() {
 		cout << question[i]<<endl;
 		cout << question[0] << endl;
 		cin >> answer[i];
-		while (answer[i] > 5 or answer[i] < 1) {
+		while (answer[i] > 5 and answer[i] < 1) {
 			cout << "輸入不符合規範，請再輸入一次" << endl << endl;
 			cout << question[i] << endl;
 			cin >> answer[i];
